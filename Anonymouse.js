@@ -2067,7 +2067,7 @@ break
                     caption: `*-------「 IMAGE SEARCH 」-------*
 🔐 *Query* : ${text}
 🔐 *Media Url* : ${images}`,
-                    footer: '🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ 🔐'
+                    footer: '🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ 🔐',
                     buttons: buttons,
                     headerType: 4
                 }
