@@ -666,9 +666,9 @@ let teks = `╚»˙·٠•●🔐 Tag All 🔐●•٠·˙«╝
                 let search = await yts(text)
                 let anony = search.videos[Math.floor(Math.random() * search.videos.length)]
                 let buttons = [
-                    {buttonId: `qhigh ${anony.url}`, buttonText: {displayText: '360P 🔐'}, type: 1},
-                    {buttonId: `qmedium ${anony.url}`, buttonText: {displayText: '240P 🔐'}, type: 1},
-                    {buttonId: `qlow ${anony.url}`, buttonText: {displayText: '144P 🔐'}, type: 1},
+                    {buttonId: `qhigh ${anony.url}`, buttonText: {displayText: '480P 🔐'}, type: 1},
+                    {buttonId: `qmedium ${anony.url}`, buttonText: {displayText: '360P 🔐'}, type: 1},
+                    {buttonId: `qlow ${anony.url}`, buttonText: {displayText: '240P 🔐'}, type: 1},
                 ]
                 let buttonMessage = {
                     image: { url: anony.thumbnail },
@@ -679,7 +679,9 @@ let teks = `╚»˙·٠•●🔐 Tag All 🔐●•٠·˙«╝
 🔐 Uploaded On : ${anony.ago}
 🔐 Author : ${anony.author.name}
 🔐 Channel : ${anony.author.url}
-🔐 Description : ${anony.description}`,
+🔐 Description : ${anony.description}
+
+Select Quality ( Some Qualities are not available )`,
                     footer: '🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
                     buttons: buttons,
                     headerType: 4
@@ -699,29 +701,29 @@ let teks = `╚»˙·٠•●🔐 Tag All 🔐●•٠·˙«╝
             break
             case 'qhigh': {
                 let { ytv } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
-                let quality = args[1] ? args[1] : '360p'
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 480p`)
+                let quality = args[1] ? args[1] : '480p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('😭 File Over Limit '+util.format(media))
-                Anony.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔐 Title : ${media.title}\n🔐 File Size : ${media.filesizeF}\n🔐 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                Anony.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔐 Title : ${media.title}\n🔐 File Size : 480P\n🔐 Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
             case 'qmedium': {
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
-                let quality = args[1] ? args[1] : '240p'
+                let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('😭 File Over Limit '+util.format(media))
-                Anony.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔐 Title : ${media.title}\n🔐 File Size : ${media.filesizeF}\n🔐 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                Anony.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔐 Title : ${media.title}\n🔐 File Size : 360P\n🔐 Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
             case 'qlow': {
                 let { ytv } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 240p`)
                 let quality = args[1] ? args[1] : '144p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('😭 File Over Limit '+util.format(media))
-                Anony.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔐 Title : ${media.title}\n🔐 File Size : ${media.filesizeF}\n🔐 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                Anony.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔐 Title : ${media.title}\n🔐 File Size : 240P\n🔐 Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
          
