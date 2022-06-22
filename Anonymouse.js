@@ -652,7 +652,7 @@ let teks = `╚»˙·٠•●🔐 Tag All 🔐●•٠·˙«╝
 🔐 Uploaded On : ${anony.ago}
 🔐 Author : ${anony.author.name}
 🔐 Channel : ${anony.author.url}
-🔐 Description : ${anony.description},
+🔐 Description : ${anony.description}`,
                     footer: '🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
                     buttons: buttons,
                     headerType: 4
