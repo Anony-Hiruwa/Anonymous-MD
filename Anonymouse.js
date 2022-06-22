@@ -661,7 +661,7 @@ let teks = `╚»˙·٠•●🔐 Tag All 🔐●•٠·˙«╝
 🔐 Channel : ${anony.author.url}
 🔐 Description : ${anony.description}
 🔐 Url : ${anony.url}`,
-                    footer: '🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐,
+                    footer: '🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
                     buttons: buttons,
                     headerType: 4
                 }
