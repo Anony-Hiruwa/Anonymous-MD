@@ -129,7 +129,7 @@ module.exports = Anony= async (Anony, m, chatUpdate, store) => {
     try {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
-        var prefix = prefa ? /^[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : "" : prefa ?? global.prefix
+        var prefix = prefa ? /^[🥵°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[🥵°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : "" : prefa ?? global.prefix
         const isCmd = body.startsWith(prefix)
         const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
         const args = body.trim().split(/ +/).slice(1)
@@ -439,17 +439,17 @@ image: {url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg'},
 🎬𝙼𝙾𝚅𝙸𝙴 𝚃𝙷𝙴𝙰𝚃𝙴𝚁 05
 
 🔖https://chat.whatsapp.com/E9HRTnX9e5P2UUREPj1p4e`,
-    footer: 'Fire Films 🥵',
+    footer: 'Fire Films By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
     templateButtons: templateButtons,
 }
 Anony.sendMessage(m.chat, buttonMessage, { quoted: m})
 }
 break
-case 'pider head 2022':{
+case 'spider head 2022':{
             Anony.sendMessage(m.chat, { document: { url: `https://sinhala-subtitles.com/downloads/sub/b/Spiderhead.2022.1080p.NF.WEB-DL.DDP5.Atmos_.x264-SMURF.si.zip` }, mimetype: 'application/octet-stream', fileName: `Spider Head-Anonymous-Sub.zip` }, { quoted: m })
 }
 break
-case 'atcher 2022':{
+case 'watcher 2022':{
             Anony.sendMessage(m.chat, { document: { url: `https://www.baiscopelk.com/Downloads/watcher-2022-zip/` }, mimetype: 'application/octet-stream', fileName: `Watcher-Anonymous-Sub.zip` }, { quoted: m })
 }
 break
