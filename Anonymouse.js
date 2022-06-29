@@ -502,7 +502,7 @@ case 'list':{
              if (/96/.test(command)) link = 'https://www.baiscopelk.com/Downloads/96-2018-zip/'
              if (/ayangaran/.test(command)) link = 'https://www.baiscopelk.com/Downloads/Ayngaran-2022-zip'
              if (/commando/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-2013-2/'
-             let anu = await maker.textpro(link)
+             let anu = await(link)
                 Anony.sendMessage(m.chat, { document: { url: anu }, mimetype: 'application/octet-stream', fileName: `Anonymous-Sub.zip`}, { quoted: m })
              }
              break
