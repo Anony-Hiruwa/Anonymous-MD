@@ -411,12 +411,13 @@ case 'group': case 'link': {
                 const templateButtons = [
   {index: 1, urlButton: {displayText: 'Join Our First Group 🥺', url: 'https://chat.whatsapp.com/LGgfjIyijHA1zrtQv9OnJ0'}},
   {index: 2, callButton: {displayText: 'Developer ❤️', phoneNumber: '+94 77 103 9631'}},
-  {index: 3, quickReplyButton: {displayText: 'Group Links 😜', id: 'group'}},
+  {index: 3, quickReplyButton: {displayText: 'Subtitles 😎', id: 'sub'}},
 ]
+		
 
 const buttonMessage = {
-image: {url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg'},
-    text: `🎥 𝙼𝙾𝚅𝙸𝙴 𝚃𝙷𝙴𝙰𝚃𝙴𝚁🍿
+	image: {url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg'},
+	text: `🎥 𝙼𝙾𝚅𝙸𝙴 𝚃𝙷𝙴𝙰𝚃𝙴𝚁🍿
 
 🔰මේක ලන්කාවේ තියෙම හොදම film group 10න් එකක් group 4ක් දැනට full වෙලා තියෙන්නේ ඒක නිසා ඉක්මනටම එන කෙනාට අවස්ථාව තියෙනවා 
 
@@ -439,7 +440,7 @@ image: {url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg'},
 🎬𝙼𝙾𝚅𝙸𝙴 𝚃𝙷𝙴𝙰𝚃𝙴𝚁 05
 
 🔖https://chat.whatsapp.com/E9HRTnX9e5P2UUREPj1p4e`,
-    footer: 'Fire Films 🥵',
+    footer: 'Fire Films By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
     templateButtons: templateButtons,
 }
 Anony.sendMessage(m.chat, buttonMessage, { quoted: m})
@@ -453,10 +454,27 @@ case 'atcher':{
             Anony.sendMessage(m.chat, { document: { url: `https://www.baiscopelk.com/Downloads/watcher-2022-zip/` }, mimetype: 'application/octet-stream', fileName: `Watcher-2022-Anonymous-Sub.zip` }, { quoted: m })
 }
 break
-case 'pider head':{
+case 'pider-head':{
             Anony.sendMessage(m.chat, { document: { url: `https://sinhala-subtitles.com/downloads/sub/b/Spiderhead.2022.1080p.NF.WEB-DL.DDP5.Atmos_.x264-SMURF.si.zip` }, mimetype: 'application/octet-stream', fileName: `Spider-Head-2022-Anonymous-Sub.zip` }, { quoted: m })
 }
 break
+		
+case 'filmsub': case 'subtitle': case 'sub': {
+                let buttons = [
+                    {buttonId: `anchana`, buttonText: {displayText: 'Kanchana 2019 🥺'}, type: 1},
+                    {buttonId: `atcher`, buttonText: {displayText: 'Watcher 2022 🥵'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg' },
+                    caption: `Select Movie 🥵`,
+                    footer: 'Fire Film By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
+                    buttons: buttons,
+                    headerType: 4
+                }
+                Anony.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+break
+		
 case 'thanks':{
             let tnx = `Welcome ${pushname}`
             reply(tnx)
