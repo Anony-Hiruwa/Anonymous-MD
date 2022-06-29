@@ -416,7 +416,7 @@ case 'group': case 'link': {
 		
 
 const buttonMessage = {
-	image: {url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg'},
+	image: {url: 'https://telegra.ph/file/e874cd0a341d48280fbfa.jpg'},
 	text: `*🔥𝙵𝙸𝚁𝙴 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿🔥*
 
 *Whatsapp හරහා film බල්ලන. එක්වන්න අප්ගේ film සමූහයට. අපෙගේ සමූහයේන් පමනක් ලබාගත හැකි විශෙශ්ෂ feature 2 ක් තියනවා.* 
@@ -463,7 +463,7 @@ case 'how' : {
                     {buttonId: `list`, buttonText: {displayText: 'Subtitle List 🥵'}, type: 1}
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg' },
+                    image: { url: 'https://telegra.ph/file/e874cd0a341d48280fbfa.jpg' },
                     caption: how ,
                     footer: 'Fire Film By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
                     buttons: buttons,
@@ -479,7 +479,7 @@ case 'subtitle': case 'subtitles': case 'sub': {
                     {buttonId: `list`, buttonText: {displayText: 'Subtitle List 🥵'}, type: 1}
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg' },
+                    image: { url: 'https://telegra.ph/file/e874cd0a341d48280fbfa.jpg' },
                     caption: `Select Your Option 🥵`,
                     footer: 'Fire Film By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
                     buttons: buttons,
@@ -505,7 +505,7 @@ break
                     {buttonId: `how`, buttonText: {displayText: 'How to Get Subtitle 🥵'}, type: 1}
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg' },
+                    image: { url: 'https://telegra.ph/file/e874cd0a341d48280fbfa.jpg' },
                     caption: list ,
                     footer: 'Fire Film By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
                     buttons: buttons,
