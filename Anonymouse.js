@@ -129,7 +129,7 @@ module.exports = Anony= async (Anony, m, chatUpdate, store) => {
     try {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
-        var prefix = prefa ? /^[abcdefghijklmnopqrstuvwxyz,ABCDEFGHIJKLMNOPQRSTUVWXYZ°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[abcdefghijklmnopqrstuvwxyz,ABCDEFGHIJKLMNOPQRSTUVWXYZ°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : "" : prefa ?? global.prefix
+        var prefix = prefa ? /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : "" : prefa ?? global.prefix
         const isCmd = body.startsWith(prefix)
         const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
         const args = body.trim().split(/ +/).slice(1)
@@ -446,23 +446,23 @@ const buttonMessage = {
 Anony.sendMessage(m.chat, buttonMessage, { quoted: m})
 }
 break
-case 'anchana':{
+case 'kanchana': case 'Kanchana':{
             Anony.sendMessage(m.chat, { document: { url: `https://github.com/DARKCRIME1/Fire-Sub-Database/raw/main/Database/sub/Kanchana-3-2019-update.zip` }, mimetype: 'application/octet-stream', fileName: `kanchana-2019-Anonymous-Sub.zip` }, { quoted: m })
 }
 break
-case 'atcher':{
+case 'watcher': case 'Watcher':{
             Anony.sendMessage(m.chat, { document: { url: `https://www.baiscopelk.com/Downloads/watcher-2022-zip/` }, mimetype: 'application/octet-stream', fileName: `Watcher-2022-Anonymous-Sub.zip` }, { quoted: m })
 }
 break
-case 'pider-head':{
+case 'spider-head': case 'Spider-head':{
             Anony.sendMessage(m.chat, { document: { url: `https://sinhala-subtitles.com/downloads/sub/b/Spiderhead.2022.1080p.NF.WEB-DL.DDP5.Atmos_.x264-SMURF.si.zip` }, mimetype: 'application/octet-stream', fileName: `Spider-Head-2022-Anonymous-Sub.zip` }, { quoted: m })
 }
 break
 		
 case 'filmsub': case 'subtitle': case 'sub': {
                 let buttons = [
-                    {buttonId: `anchana`, buttonText: {displayText: 'Kanchana 2019 🥺'}, type: 1},
-                    {buttonId: `atcher`, buttonText: {displayText: 'Watcher 2022 🥵'}, type: 1}
+                    {buttonId: `kanchana`, buttonText: {displayText: 'Kanchana 2019 🥺'}, type: 1},
+                    {buttonId: `watcher`, buttonText: {displayText: 'Watcher 2022 🥵'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg' },
