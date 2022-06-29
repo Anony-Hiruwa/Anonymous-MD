@@ -417,29 +417,35 @@ case 'group': case 'link': {
 
 const buttonMessage = {
 	image: {url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg'},
-	text: `🎥 𝙼𝙾𝚅𝙸𝙴 𝚃𝙷𝙴𝙰𝚃𝙴𝚁🍿
+	text: `*🔥𝙵𝙸𝚁𝙴 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿🔥*
 
-🔰මේක ලන්කාවේ තියෙම හොදම film group 10න් එකක් group 4ක් දැනට full වෙලා තියෙන්නේ ඒක නිසා ඉක්මනටම එන කෙනාට අවස්ථාව තියෙනවා 
+*Whatsapp හරහා film බල්ලන. එක්වන්න අප්ගේ film සමූහයට. අපෙගේ සමූහයේන් පමනක් ලබාගත හැකි විශෙශ්ෂ feature 2 ක් තියනවා.* 
 
-🎬 𝙼𝙾𝚅𝙸𝙴 𝚃𝙷𝙴𝙰𝚃𝙴𝚁 01👇
+*1. අපගේ group වල film upload කරන්නේ. rar file විදිහට නෙවෙයි. ඒක නිසා extract කරන්න මහන්සි වෙන්න ඕනේ නෑ 😎.* (❌𝙽𝙾 𝚁𝙰𝚁 𝙵𝙸𝙻𝙴𝚂)
 
-🔖https://chat.whatsapp.com/LGgfjIyijHA1zrtQv9OnJ0
+*2. 𝚏𝚒𝚕𝚖 එකට 𝚜𝚞𝚋𝚝𝚒𝚝𝚒𝚕𝚎 𝚊𝚍𝚍 කරන්න දගලන්න ඕනේ නෑ 𝚟𝚒𝚍𝚎𝚘 𝚏𝚒𝚕𝚎 එකටම 𝚜𝚞𝚋𝚝𝚒𝚕𝚎 𝚊𝚍𝚍 කරලා තියෙන්නෙ. ඔයාලට පුලුවන් කැමතිනම් 𝚜𝚞𝚋𝚝𝚒𝚝𝚕𝚎 එක 𝙳𝚎𝚜𝚊𝚋𝚕𝚎 කරලා 𝚏𝚒𝚕𝚖 එක බලන්න.*
 
-🎬𝙼𝙾𝚅𝙸𝙴 𝚃𝙷𝙴𝙰𝚃𝙴𝚁 02
+*මෙන්න අප්ගේ 𝚐𝚛𝚘𝚞𝚙 𝚕𝚒𝚗𝚔. (𝚐𝚛𝚘𝚞𝚙 සීමිත බැවින් ඉක්මනට 𝚓𝚒𝚘𝚗 වෙන්න) 👇*
 
-🔖https://chat.whatsapp.com/FieIO5ePPaYKDhiP9WN1et
+*1 𝚐𝚛𝚘𝚞𝚙 👉* https://chat.whatsapp.com/DDABFCoorQiBsnnytDGOBs
 
-🎬𝙼𝙾𝚅𝙸𝙴 𝚃𝙷𝙴𝙰𝚃𝙴𝚁 03
+*2 𝚐𝚛𝚘𝚞𝚙 👉 https://chat.whatsapp.com/DBFb2xv8CRa6Qc5trcTycy*
 
-🔖https://chat.whatsapp.com/Jfu32pSomwHC1gXu088t91
+*3 𝚐𝚛𝚘𝚞𝚙 👉 https://chat.whatsapp.com/Busyp1CGswQDjzXji7Vm11*
 
-🎬𝙼𝙾𝚅𝙸𝙴 𝚃𝙷𝙴𝙰𝚃𝙴𝚁 04
+*4 𝚐𝚛𝚘𝚞𝚙 👉 https://chat.whatsapp.com/F74XworDMNTDcm0jBka5XH*
 
-🔖https://chat.whatsapp.com/JqeGkia4YpH1hEG3AdS8Eq
+*5 𝚐𝚛𝚘𝚞𝚙 👉 https://chat.whatsapp.com/LGgfjIyijHA1zrtQv9OnJ0*
 
-🎬𝙼𝙾𝚅𝙸𝙴 𝚃𝙷𝙴𝙰𝚃𝙴𝚁 05
+*6 𝚐𝚛𝚘𝚞𝚙 👉 https://chat.whatsapp.com/FieIO5ePPaYKDhiP9WN1et*
 
-🔖https://chat.whatsapp.com/E9HRTnX9e5P2UUREPj1p4e`,
+*7 𝚐𝚛𝚘𝚞𝚙 👉 https://chat.whatsapp.com/Jfu32pSomwHC1gXu088t91*
+
+*8 𝚐𝚛𝚘𝚞𝚙 👉 https://chat.whatsapp.com/JqeGkia4YpH1hEG3AdS8Eq*
+
+*9 𝚐𝚛𝚘𝚞𝚙 👉 https://chat.whatsapp.com/E9HRTnX9e5P2UUREPj1p4e*
+
+*⚠️එක 𝚐𝚛𝚘𝚞𝚙 එකකට විතරක් 𝚓𝚘𝚒𝚗 වෙන්න 𝚐𝚛𝚘𝚞𝚙 2,  3 ක ඉන්නවනම් 𝚕𝚎𝚏𝚝 වෙන්න නැත්තම් ඔක්කම 𝚐𝚛𝚘𝚞𝚙 වලින්  𝚛𝚎𝚖𝚘𝚟𝚎 කරනවා.⚠️*`,
     footer: 'Fire Films By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
     templateButtons: templateButtons,
     headerType: 4
