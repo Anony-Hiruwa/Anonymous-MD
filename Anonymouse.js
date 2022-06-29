@@ -500,7 +500,7 @@ break
                 ]
                 let buttonMessage = {
                     image: { url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg' },
-                    caption: how ,
+                    caption: list ,
                     footer: 'Fire Film By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
                     buttons: buttons,
                     headerType: 4
