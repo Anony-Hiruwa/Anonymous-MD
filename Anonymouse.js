@@ -411,7 +411,7 @@ case 'group': case 'link': {
                 const templateButtons = [
   {index: 1, urlButton: {displayText: 'Join Our First Group 🥺', url: 'https://chat.whatsapp.com/LGgfjIyijHA1zrtQv9OnJ0'}},
   {index: 2, callButton: {displayText: 'Developer ❤️', phoneNumber: '+94 77 103 9631'}},
-  {index: 3, quickReplyButton: {displayText: 'Group Links 😜', id: 'group'}},
+  {index: 3, quickReplyButton: {displayText: 'Kanchana 2019 😜', id: 'anchana2019'}},
 ]
 
 const buttonMessage = {
@@ -449,11 +449,11 @@ case 'anchana2019':{
             Anony.sendMessage(m.chat, { document: { url: `https://github.com/DARKCRIME1/Fire-Sub-Database/raw/main/Database/sub/Kanchana-3-2019-update.zip` }, mimetype: 'application/octet-stream', fileName: `Spider Head-Anonymous-Sub.zip` }, { quoted: m })
 }
 break
-case 'atcher_2022':{
+case 'atcher 2022':{
             Anony.sendMessage(m.chat, { document: { url: `https://www.baiscopelk.com/Downloads/watcher-2022-zip/` }, mimetype: 'application/octet-stream', fileName: `Watcher-Anonymous-Sub.zip` }, { quoted: m })
 }
 break
-case 'pider_head_2022':{
+case 'pider head 2022':{
             Anony.sendMessage(m.chat, { document: { url: `https://sinhala-subtitles.com/downloads/sub/b/Spiderhead.2022.1080p.NF.WEB-DL.DDP5.Atmos_.x264-SMURF.si.zip` }, mimetype: 'application/octet-stream', fileName: `Watcher-Anonymous-Sub.zip` }, { quoted: m })
 }
 break
