@@ -621,7 +621,7 @@ case 'harrypotter1-4': {
                 Anony.sendMessage(m.chat, { document: { url: harry1 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-1-Fire-Anony-Sub.zip`}, { quoted: m })
                 Anony.sendMessage(m.chat, { document: { url: harry2 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-2-Fire-Anony-Sub.zip`}, { quoted: m })
                 Anony.sendMessage(m.chat, { document: { url: harry3 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-3-Fire-Anony-Sub.zip`}, { quoted: m })
-                Anony.sendMessage(m.chat, { document: { url: harry4 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-4Fire-Anony-Sub.zip`}, { quoted: m })
+                Anony.sendMessage(m.chat, { document: { url: harry4 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-4-Fire-Anony-Sub.zip`}, { quoted: m })
              }
              break
              
@@ -632,10 +632,10 @@ case 'harrypotter5-8': {
             let harry7 = 'https://www.baiscopelk.com/Downloads/harry-potter-and_-the_-deathly-hallows-part_-1-2010-zip/'
             let harry8 = 'https://www.baiscopelk.com/Downloads/harry-potter-and_-the_-deathly-hallows-part_-2-2011-sinhala-sub_-zip/'
              
-                Anony.sendMessage(m.chat, { document: { url: harry5 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-1-Fire-Anony-Sub.zip`}, { quoted: m })
-                Anony.sendMessage(m.chat, { document: { url: harry6 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-2-Fire-Anony-Sub.zip`}, { quoted: m })
-                Anony.sendMessage(m.chat, { document: { url: harry7 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-3-Fire-Anony-Sub.zip`}, { quoted: m })
-                Anony.sendMessage(m.chat, { document: { url: harry8 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-4Fire-Anony-Sub.zip`}, { quoted: m })
+                Anony.sendMessage(m.chat, { document: { url: harry5 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-5-Fire-Anony-Sub.zip`}, { quoted: m })
+                Anony.sendMessage(m.chat, { document: { url: harry6 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-6-Fire-Anony-Sub.zip`}, { quoted: m })
+                Anony.sendMessage(m.chat, { document: { url: harry7 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-7-Fire-Anony-Sub.zip`}, { quoted: m })
+                Anony.sendMessage(m.chat, { document: { url: harry8 }, mimetype: 'application/octet-stream', fileName: `Harrypotter-8-Fire-Anony-Sub.zip`}, { quoted: m })
              }
              break
              
