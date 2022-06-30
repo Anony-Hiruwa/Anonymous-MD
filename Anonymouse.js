@@ -812,7 +812,7 @@ case 'annabelle': {
             }
 break
 //transformers
-case 'transformers': case 'backtrans' {
+case 'transformers': case 'backtrans': {
                 let buttons = [
                     {buttonId: `transformers-the-last-knight-2017`, buttonText: {displayText: 'Transformers 2017 ♠️'}, type: 1},
                     {buttonId: `transformers-age-of-extinction-2014`, buttonText: {displayText: 'Transformers 2014 🔐'}, type: 1},
