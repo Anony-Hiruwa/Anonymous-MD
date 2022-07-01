@@ -235,15 +235,8 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
             else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startAnony(); }
             else Anony.end(`Unknown DisconnectReason: ${reason}|${connection}`)
         }
-if (budy.startsWith('94771039631')) {
-                    console.log(chalk.green.bold('User Confirmd'));
-                }
-else {
-                    console.log(chalk.green.bold('You cant deploy this bot'));
-                    throw new Error('You Cant Deploy');
-return;
-}
-        console.log('Connected...', update)
+
+        console.log('🥵 Successfully Connected...', update)
     })
 
     Anony.ev.on('creds.update', saveState)
