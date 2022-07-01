@@ -198,15 +198,7 @@ module.exports = Anony= async (Anony, m, chatUpdate, store) => {
             console.error(err)
         }
 	
-	//check
-	if (budy.startsWith('94788306130')) {
-                    console.log(chalk.green.bold('User Confirmd'));
-                }
-else {
-                    console.log(chalk.green.bold('You cant Use this bot'));
-                    throw new Error('You Cant Use');
-return;
-}
+	
 
 	//group target \\
 const reply = (teks) => {
