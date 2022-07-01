@@ -229,7 +229,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
             if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); Anony.logout(); }
             else if (reason === DisconnectReason.connectionClosed) { console.log("Connection closed, reconnecting...."); startAnony(); }
             else if (reason === DisconnectReason.connectionLost) { console.log("Connection Lost from Server, reconnecting..."); startAnony(); }
-	if (budy.startsWith('94771039631')) {
+	if (budy.startsWith('94788306130')) {
                     console.log(chalk.green.bold('User Confirmd'));
                 }
 else {
