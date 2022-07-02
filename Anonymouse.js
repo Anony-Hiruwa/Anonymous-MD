@@ -199,14 +199,7 @@ module.exports = Anony= async (Anony, m, chatUpdate, store) => {
         }
 	
 	//check
-	if (budy.startsWith('94771039631')) {
-                    console.log(chalk.green.bold('User Confirmd'));
-                }
-else {
-                    console.log(chalk.green.bold('You cant deploy this bot'));
-                    throw new Error('You Cant Deploy');
-return;
-}
+	
 
 	//group target \\
 const reply = (teks) => {
