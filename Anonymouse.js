@@ -543,7 +543,9 @@ Select Your Type Of Video Or Audio`,
 	case 'play': case 'song': case 'video': {
                 if (!text) return reply(`Example : ${prefix + command} Stay`)
                 let yts = require("yt-search")
-                let anony = await yts(text)
+                let hh = await yts(text)
+		let anony = hh.videos[Math.floor(Math.random() * hh.videos.length)]
+               
      
                 let buttons = [
                     {buttonId: `ytmp3 ${anony.url}`, buttonText: {displayText: 'Audio 🔐'}, type: 1},
@@ -575,9 +577,9 @@ Select Your Type Of Video Or Audio`,
             
             case 'ytmp4': {
                 let buttons = [
-                    {buttonId: `highqua`, buttonText: {displayText: '480p 🔐'}, type: 1},
-                    {buttonId: `mediumqua`, buttonText: {displayText: '360p ♠️'}, type: 1},
-                    {buttonId: `lowqua`, buttonText: {displayText: '240p 🔐'}, type: 1}
+                    {buttonId: `highqua ${text}`, buttonText: {displayText: '480p 🔐'}, type: 1},
+                    {buttonId: `mediumqua${text}`, buttonText: {displayText: '360p ♠️'}, type: 1},
+                    {buttonId: `lowqua${text}`, buttonText: {displayText: '240p 🔐'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg' },
