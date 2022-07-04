@@ -543,8 +543,9 @@ Select Your Type Of Video Or Audio`,
 	case 'play': case 'song': case 'video': {
                 if (!text) return reply(`Example : ${prefix + command} Stay`)
                 let yts = require("yt-search")
-                let anony = await yts(text)
-     
+                let hh = await yts(text)
+		let anony = hh.videos[Math.floor(Math.random() * hh.videos.length)]
+            
                 let buttons = [
                     {buttonId: `ytmp3 ${anony.url}`, buttonText: {displayText: 'Audio 🔐'}, type: 1},
                     {buttonId: `ytmp4 ${anony.url}`, buttonText: {displayText: 'Video 🔐'}, type: 1}
