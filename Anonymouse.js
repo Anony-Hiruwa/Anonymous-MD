@@ -578,8 +578,8 @@ Select Your Type Of Video Or Audio`,
             case 'ytmp4': {
                 let buttons = [
                     {buttonId: `highqua ${text}`, buttonText: {displayText: '480p 🔐'}, type: 1},
-                    {buttonId: `mediumqua${text}`, buttonText: {displayText: '360p ♠️'}, type: 1},
-                    {buttonId: `lowqua${text}`, buttonText: {displayText: '240p 🔐'}, type: 1}
+                    {buttonId: `mediumqua ${text}`, buttonText: {displayText: '360p ♠️'}, type: 1},
+                    {buttonId: `lowqua ${text}`, buttonText: {displayText: '240p 🔐'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: 'https://telegra.ph/file/6852aab70c51bf2797244.jpg' },
