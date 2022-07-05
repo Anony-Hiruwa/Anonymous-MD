@@ -543,7 +543,7 @@ Select Your Type Of Video Or Audio`,
                 if (!text) return reply(`Example : ${prefix + command} Stay`)
                 let yts = require("yt-search")
                 let anony = await yts(text)
-                for (let i of search.all)
+                for (let i of anony.all)
                 
                 let buttons = [
                     {buttonId: `ytmp3 ${anony.all[0].url}`, buttonText: {displayText: 'Audio 🔐'}, type: 1},
