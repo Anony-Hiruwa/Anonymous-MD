@@ -399,6 +399,68 @@ switch(command) {
     reply(txt)       
   }
  break
+		
+	case 'update' :{
+                const simpleGit = require('simple-git')
+                const git = simpleGit();
+                    await git.fetch();
+                        var commits = await git.log(['master' + '..origin/' + 'master']);
+                    if (commits.total === 0) {
+                        await Anony.sendMessage(m.chat,{text:'*You have the Latest Version Installed*'})    
+                    } else {
+                        var availupdate = '*ᴜᴘᴅᴀᴛᴇs ᴀᴠᴀɪʟᴀʙʟᴇ* \n\n'+'```';
+                        commits['all'].map(
+                        (commit) => { 
+                        availupdate += '🏓  '+ commit.message +'\n'});
+                        let buttons = [
+                            { buttonId: 'update now', buttonText: { displayText: 'UPDATE NOW' }, type: 1 },
+                        ]
+                        await Anony.sendMessage(m.chat, buttons, availupdate + '```', ${pushname})
+                        
+                    }}                       
+                    
+            
+            break
+            case 'update now':{
+                const Heroku = require('heroku-client');
+                const heroku = new Heroku({ token: config.HEROKU.API_KEY })
+                const simpleGit = require('simple-git')
+                const git = simpleGit();
+                await git.fetch();
+                        var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
+                        if (commits.total === 0) {
+                            return await Anony.sendMessage(m.chat,{text:'*You have the latest Version Installed*'})   
+                        } else {
+                               
+
+                                    var app = await heroku.get('/apps/' + HEROKU.NAME)
+                                    await Anony.sendMessage(m.chat,{text:'*UPDATING...*'})
+                                
+                                    /*await conn.sendMessage(m.chat,{text:'```Invalid Heroku Credentials```'})
+                                    await new Promise(r => setTimeout(r, 1000));
+                                    return await Anony.sendMessage(m.chat,{text:'```Please give correct credentials```'})*/
+                                
+                    
+                                git.fetch('upstream', config.BRANCH);
+                                git.reset('hard', ['FETCH_HEAD']);
+                    
+                                var git_url = app.git_url.replace(
+                                    "https://", "https://api:" + config.HEROKU.API_KEY + "@"
+                                )
+                                
+                                try {
+                                    await git.addRemote('heroku', git_url);
+                                } catch { console.log('heroku remote ekli'); }
+                                await git.push('heroku', config.BRANCH);
+                    
+                                await Anony.sendMessage(m.chat,{text:'*UPDATED...*'})
+                    
+                                await Anony.sendMessage(m.chat,{text:'*RESTARTING...*'})
+                                
+                         
+                        }}
+            
+           break	
  
  case 'owner': {
  	const vcard = 'BEGIN:VCARD\n' 
