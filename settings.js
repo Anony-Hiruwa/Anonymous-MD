@@ -1,5 +1,5 @@
 
-
+const config = require('./config')
 const fs = require('fs')
 const chalk = require('chalk')
 
@@ -14,12 +14,12 @@ global.APIKeys = {
 }
 
 
-global.owner = ['94771039631']
-global.premium = ['94771039631']
-global.ownernomer = '94771039631'
-global.ownername = 'Hiruwa'
+global.owner = [config.OWNER]
+global.premium = ['Hiruwa']
+global.ownernomer = config.OWNERNUM
+global.ownername = config.OWNER
 global.botname = 'Anonymous'
-global.footer = '©Anonymous'
+global.footer = '🔐 ©ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐'
 global.ig = 'https://github.com/'
 global.region = 'India, South India, Kerala'
 global.sc = 'https://github.com/'
@@ -27,8 +27,8 @@ global.myweb = 'https://youtube.com/'
 global.packname = 'Anonymous'
 global.author = 'Anonymous'
 global.sessionName = 'session'
-global.prefa = ['','!','.','🐦','🐤','🗿']
-global.sp = '⭔'
+global.prefa = ['','!','.','🔐','♠️','⇛']
+global.sp = '🔐'
 global.mess = {
     success: 'Done ✓',
     admin: 'This Feature Is Only For Admin!',
