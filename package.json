@@ -1,7 +1,7 @@
 {
-  "name": "Anonymous",
+  "name": "🔐-ᴀɴᴏɴʏᴍᴏᴜꜱ-ʙᴏᴛ-🔐",
   "version": "1.0.0",
-  "description": "WhatsApp Using Lib Baileys Multi Device",
+  "description": "WhatsApp User Bot For Multi Device",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
