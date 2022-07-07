@@ -1,0 +1,47 @@
+{
+  "name": "🔐-ᴀɴᴏɴʏᴍᴏᴜꜱ-🔐",
+  "description": "whatsapp md bot build with nodejs",
+  "repository": "https://github.com/DARKCRIME1/Md_",
+  "logo": "https://telegra.ph/file/6852aab70c51bf2797244.jpg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
+  
+  "env": {
+        "OWNER_NAME": {
+            "description": "Pleas enter your Name.",
+            "required": true,
+            "value": "Hiruwa"
+        }, 
+        "OWNER_NUMBER": {
+            "description": "Pleas enter Your Number.",
+            "required": true,
+            "value": "94771039631"
+        }, 
+        "HEROKU_API_KEY": {
+            "description": "Pleas enter your Heroku API Key.",
+            "required": true
+        }, 
+        "HEROKU_APP_NAME": {
+            "description": "Please Enter Your Heroku App Name.",
+            "required": true
+        }
+	},
+  
+  
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+   "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
