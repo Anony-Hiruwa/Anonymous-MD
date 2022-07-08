@@ -412,10 +412,8 @@ switch(command) {
                         commits['all'].map(
                         (commit) => { 
                         availupdate += '🏓  '+ commit.message +'\n'});
-                        let buttons = [
-                            { buttonId: 'update now', buttonText: { displayText: 'UPDATE NOW' }, type: 1 },
-                        ]
-                        await Anony.sendMessage(m.chat, buttons, availupdate + '```', ${pushname})
+                        
+			    await Anony.sendMessage(m.chat, {text: availupdate })
                         
                     }}                       
                     
