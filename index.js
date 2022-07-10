@@ -25,7 +25,7 @@ const mongoDB = require('./lib/mongoDB')
 
 global.api = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 
-const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
+const store = makeInMemoryStore({ logger: pino().child({ level: 'debug', stream: 'store' }) })
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 global.db = new Low(
@@ -50,11 +50,18 @@ if (global.db) setInterval(async () => {
     if (global.db.data) await global.db.write()
   }, 30 * 1000)
 
+
+store.readFromFile('./session.json')
+// saves the state to a file every 10s
+setInterval(() => {
+    store.writeToFile('./session.json')
+}, 10_000)
+
 async function startAnony() {
     const Anony = AnonymousConnect({
-        logger: pino({ level: 'silent' }),
+        logger: pino({ level: 'debug' }),
         printQRInTerminal: true,
-        browser: ['Anonymous MD Bot','Safari','1.0.0'],
+        browser: ['Anonymous-MD','Safari','1.0.0'],
         auth: state
     })
 
@@ -139,16 +146,16 @@ Kon = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURICom
 Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
                 if (anu.action == 'add') {
                     Anony.sendMessage(anu.id, { image: Kon, contextInfo: { mentionedJid: [num] }, caption: `
-⭐✑ Hi👋 @${num.split("@")[0]},
-⭐✑ Welcome To ${metadata.subject}
+🔐✑ Hi👋 @${num.split("@")[0]},
+🔐✑ Welcome To ${metadata.subject}
 
-⭐✑ Description: ${metadata.desc}
+🔐✑ Description: ${metadata.desc}
 
-⭐✑ Welcome To Our Comfortable Happy😋, Sometimes Loud😜, Usually Messy🤥, Full Of Love🥰, HOME😌!!`} )
+🔐✑ Welcome To Our Group 🫣`} )
                 } else if (anu.action == 'remove') {
                     Anony.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: `⭐✑ @${num.split("@")[0]} Left ${metadata.subject}
 
-⭐✑ I'm Not Sure If It Was A Goodbye Charm, But It Was Fun While It Lasted 😌✨` })
+🔐✑ I'm Not Sure If It Was A Goodbye Charm, 🥹😒` })
                 }
             }
         } catch (err) {
@@ -226,19 +233,24 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
         const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
-            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); Anony.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("Connection closed, reconnecting...."); startAnony(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("Connection Lost from Server, reconnecting..."); startAnony(); }
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("Connection Replaced, Another New Session Opened, Please Close Current Session First"); Anony.logout(); }
-            else if (reason === DisconnectReason.loggedOut) { console.log(`Device Logged Out, Please Scan Again And Run.`); Anony.logout(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("Restart Required, Restarting..."); startAnony(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startAnony(); }
+            if (reason === DisconnectReason.badSession) { console.log(`🥹 Bad Session File, Please Delete Session and Scan Again`); Anony.logout(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("🥹 Connection closed, reconnecting...."); startAnony(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("🥹 Connection Lost from Server, reconnecting..."); startAnony(); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("🥹 Connection Replaced, Another New Session Opened, Please Close Current Session First"); Anony.logout(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`🥹 Device Logged Out, Please Scan Again And Run.`); Anony.logout(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("🥹 Restart Required, Restarting..."); startAnony(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("🥹 Connection TimedOut, Reconnecting..."); startAnony(); }
             else Anony.end(`Unknown DisconnectReason: ${reason}|${connection}`)
         }
 
-        console.log('🥵 Successfully Connected...', update)
+        console.log('🥵 Successfully Connected... 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐', update)
     })
 
+setInterval(() => {
+    startAnony()
+}, 300_000)
+	
+	
     Anony.ev.on('creds.update', saveState)
 
     // Add Other
@@ -360,7 +372,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
     Anony.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         let buffer
-        if (options && (options.packname || options.author)) {
+        if (options && ('Anonymous-MD' || 'Hiruwa')) {
             buffer = await writeExifImg(buff, options)
         } else {
             buffer = await imageToWebp(buff)
@@ -381,7 +393,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
     Anony.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         let buffer
-        if (options && (options.packname || options.author)) {
+        if (options && ('Anonymous-MD' || 'Hiruwa')) {
             buffer = await writeExifVid(buff, options)
         } else {
             buffer = await videoToWebp(buff)
